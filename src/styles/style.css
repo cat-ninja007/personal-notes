@@ -90,6 +90,14 @@ main {
   border-top: 5px solid;
 }
 
+.note-item:hover {
+  border-color: var(--primary);
+}
+
+.note-item__link {
+  text-decoration: none;
+}
+
 .note-item__title {
   margin: 4px 0;
 }

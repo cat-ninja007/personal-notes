@@ -1,8 +1,12 @@
 import React from "react";
 import Navigation from "./components/Navigation";
-import HomePage from "./pages/HomePage";
+
+import Homepage from "./pages/HomePage";
 import AddNotePage from "./pages/AddNotePage";
+import ArchivedNotePage from "./pages/ArchivedNotePage";
+import DetailPageWrapper from "./pages/DetailPage";
 import { Routes, Route } from "react-router-dom";
+
 function App() {
 	return (
 		<div className="app-container">
@@ -12,8 +16,10 @@ function App() {
 			</header>
       <main>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<AddNotePage />} />
+          <Route path="/archived" element={<ArchivedNotePage />} />
+					<Route path="/notes/:id" element={<DetailPageWrapper />} />
         </Routes>
       </main>
 		</div>
